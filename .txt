@@ -1,0 +1,2 @@
+Pikachu:60:Squirtle:38:1:Pikachu attacks Squirtle
+It's super effective! 

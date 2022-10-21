@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pokemongame.fxui.PokemonController">
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="291.0" layoutX="8.0" layoutY="46.0" opacity="0.51" stroke="BLACK" strokeType="INSIDE" width="248.0">
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.8970872163772583" green="0.9342105388641357" blue="0.4887305200099945" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </Rectangle>
+            <ImageView fx:id="pokemonFigure1" fitHeight="200.0" fitWidth="150.0" layoutX="14.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="58.30000305175781" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="436.0" AnchorPane.topAnchor="143.0">
+               <image>
+                  <Image url="@Bulbasaur.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pokemonName1" layoutX="14.0" layoutY="53.0" text="Pokemon1" AnchorPane.bottomAnchor="235.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="131.0" AnchorPane.topAnchor="53.0">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="HP_1" layoutX="118.0" layoutY="73.0" text="100">
+               <font>
+                  <Font size="17.0" />
+               </font></Label>
+            <Text layoutX="152.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 100">
+               <font>
+                  <Font size="17.0" />
+               </font></Text>
+            <MenuBar fx:id="Menubar" prefHeight="29.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem fx:id="SaveGame" mnemonicParsing="false" onAction="#handleSaveGame" text="Save game" />
+                        <MenuItem fx:id="LoadGame" mnemonicParsing="false" onAction="#handleLoadGame" text="Load game" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem fx:id="NewGame" mnemonicParsing="false" onAction="#handleNewGame" text="New Game" />
+                     </items></Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Call 911" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label fx:id="pokemon1Type" layoutX="14.0" layoutY="108.0" text="Pokemon1Type" />
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="351.0" prefWidth="248.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="291.0" layoutX="-39.0" layoutY="50.0" opacity="0.36" stroke="BLACK" strokeType="INSIDE" width="245.0">
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.5138888955116272" green="0.7974537014961243" blue="1.0" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </Rectangle>
+            <ImageView fx:id="pokemonFigure2" fitHeight="150.0" fitWidth="200.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="68.81990051269531" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="140.0">
+               <image>
+                  <Image url="@Pikachu.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="pokemonName2" layoutX="-8.0" layoutY="50.0" prefHeight="63.0" prefWidth="108.0" text="Pokemon2" AnchorPane.bottomAnchor="238.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="50.0">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Text layoutX="153.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/ 100">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Text>
+            <Label fx:id="HP_2" layoutX="117.0" layoutY="70.0" text="100">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label fx:id="pokemon2Type" layoutX="-8.0" layoutY="105.0" text="Pokemon2Type" />
+         </children>
+      </AnchorPane>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="103.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="92.0" layoutX="3.0" layoutY="6.0" opacity="0.39" stroke="BLACK" strokeType="INSIDE" width="303.0">
+               <effect>
+                  <Shadow>
+                     <color>
+                        <Color red="0.6823529601097107" green="0.6823529601097107" blue="0.6823529601097107" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </Rectangle>
+            <ListView fx:id="attackDisplay" layoutX="331.0" layoutY="7.0" onMouseClicked="#handleAttackButton" prefHeight="90.0" prefWidth="255.0" />
+            <Label fx:id="statusOut" alignment="BOTTOM_LEFT" layoutX="15.0" layoutY="25.0" prefHeight="70.0" prefWidth="280.0" AnchorPane.bottomAnchor="24.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="305.0" AnchorPane.topAnchor="25.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="displayTurn" layoutX="13.0" layoutY="9.0">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -1,0 +1,2 @@
+Charmander:42:Pikachu:46:0:Pikachu attacks Charmander
+It's super effective! 
